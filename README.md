@@ -62,12 +62,21 @@ e.g. PCBA V1.1 and V1.2 have the same functionality but the layout was changed d
 -	Solving missing conenction
 -	
 
-Version change e.g.
-Schema	V0.0.0		->	V0.1.0
-BOM		V0.0.0		->	V0.1.0
-PCB		V0.0  		->	V0.1
+E.g. exchanging a 100nF 0805 X7R 25V with a 220nF 1206 X7R 50V 
+Schema	Vn.n.n		->	V[n].[n + 1].0 component change
+BOM		Vn.n.n		->	V[n].[n + 1].0 componant change
+PCB		Vn.n  		->	V[n].[n + 1] footprint change in layout
+The minor change has an impact on the schema, BOM and the PCB.
 
-All PCBA V0.X are interchangeable form the implementation point of view.
+E.g. exchanging an OPAMP LM358 from SOIC 8 to TSSOP 8 
+Schema	Vn.n.n		->	V[n].[n + 1].0 component change
+BOM		Vn.n.n		->	V[n].[n + 1].0 componant change
+PCB		Vn.n  		->	V[n].[n + 1] footprint change in layout
+The minor change has an impact on the schema, BOM and the PCB.
+
+For each Minor change the patch number is set to 0.
+
+For a given PCB Version number V[n].[x] with the same Major version denoted with n and any minor version denoted as x, all PCBAs are compatible.
 
 ### Patch
 
@@ -80,11 +89,18 @@ e.g.
 -	Replacing an OPAMP but keeping the footprint and pinout same. 
 
 
-Version change e.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V 
+E.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V 
 Schema	V0.0.0		->	V0.0.1
 BOM		V0.0.0		->	V0.0.1
-PCB		V0.0  		->	V0.0
+PCB		V0.0  		->	V0.0 no layout changes
 The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
+
+E.g. excluding placement of certain circuitry without any functional limitations (e.g. debug pin, debug LED, etc.)
+Schema	V0.0.0		->	V0.0.1 parts are marked as do not place (DNP) 
+BOM		V0.0.0		->	V0.0.1  parts are excluded from BOM
+PCB		V0.0  		->	V0.0 no layout changes
+The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
+
 
 For more rigerose tracking of the PCBA it is allowed to add by any means the possibility of adding the patch number on to the PCB after assembling or modification to be able to identify what path is implemented on the PCBA. One example is to add in silk an area for marking the patch version onto the PCB.
 
