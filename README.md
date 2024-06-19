@@ -51,6 +51,8 @@ Any changes to the design
 Any changes to the electronic interface
 -	Changing connector pinouts
 
+For any given major change the first digit in the version code must be iterated. This number must be applyed to all the files related to the PCBA. Even if certain changes do not affect certain files. This is done to prevent any confusion and maintains in clarity in the versioning history
+
 ### Minor
 
 Changes which incorporate a difference int PCB 
