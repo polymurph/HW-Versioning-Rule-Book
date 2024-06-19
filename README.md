@@ -31,7 +31,7 @@ PCB		V0.0
 
 ### Major
 
-Form fir and function change
+Form, fit and function change
 Any change which has compatibility changes with firmware and hardware
 Any changes which change the Basic interfacing Mechanics
 -	removing or moving mounting holes
