@@ -31,10 +31,8 @@ PCB		V0.0
 
 ### Major
 
-Form, fit and function change
-
-The Major number indicates and changes which break backwards compatability with older versions.
-The following lists show categorically differenciated examples of changes which are considered major.
+The Major number indicates the main version of the PCBA at hand. It changes with every break regarding backwards compatability with older versions.
+The following lists show categorically differenciated examples of changes which are considered a major change.
 
 **Electromechanical and Mechanical changes**
 -	removing or moving mounting holes
@@ -73,15 +71,20 @@ All PCBA V0.X are interchangeable form the implementation point of view.
 
 ### Patch
 
+The patch number indicates the patchwork version of the PCBA at hand. It changes with every change that does not affect the PCB. Any patch change will be compatible with the PCB version at hand.
+The following lists show categorically differenciated examples of changes which are considered a patch change.
+
 Only changes to the BOM or Schmeatics no changes to the PCBA in any form
 e.g.
 -	replacing a 100nF 25V X7R 1206 to a 220nF X7R 1206. This 
 -	Replacing an OPAMP but keeping the footprint and pinout same. 
 
-Version change e.g.
+
+Version change e.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V 
 Schema	V0.0.0		->	V0.0.1
 BOM		V0.0.0		->	V0.0.1
 PCB		V0.0  		->	V0.0
+The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
 
 For more rigerose tracking of the PCBA it is allowed to add by any means the possibility of adding the patch number on to the PCB after assembling or modification to be able to identify what path is implemented on the PCBA. One example is to add in silk an area for marking the patch version onto the PCB.
 
