@@ -32,20 +32,24 @@ PCB		V0.0
 ### Major
 
 Form, fit and function change
-Any change which has compatibility changes with firmware and hardware
-Any changes which change the Basic interfacing Mechanics
+
+The Major number indicates and changes which break backwards compatability with older versions.
+The following lists show categorically differenciated examples of changes which are considered major.
+
+Electromechanical and Mechanical changes.
 -	removing or moving mounting holes
--	reshaping the PCBA outline
+-	reshaping the outline of the PCB
 -	changing the PCBA material and/or thickness
-
--	Change of microcontroller (firm- and hardware changes)
--	Adding or removing Connectors
 -	Moving connectors
--	Changing connector pinouts
--	Changing the outline of the PCB
 
-Functionality changes
+Any changes to the design
+-	Change of microcontroller
+-	Adding or removing Connectors
 -	Adding or removing features e.g. adding a Temperature sensor
+-	Adding power input protection circuit
+
+Any changes to the electronic interface
+-	Changing connector pinouts
 
 ### Minor
 
