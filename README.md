@@ -63,15 +63,23 @@ e.g. PCBA V1.1 and V1.2 have the same functionality but the layout was changed d
 -	
 
 E.g. exchanging a 100nF 0805 X7R 25V with a 220nF 1206 X7R 50V 
+
 Schema	Vn.n.n		->	V[n].[n + 1].0 component change
+
 BOM		Vn.n.n		->	V[n].[n + 1].0 componant change
+
 PCB		Vn.n  		->	V[n].[n + 1] footprint change in layout
+
 The minor change has an impact on the schema, BOM and the PCB.
 
-E.g. exchanging an OPAMP LM358 from SOIC 8 to TSSOP 8 
+E.g. exchanging an OPAMP LM358 from SOIC 8 to TSSOP 8
+
 Schema	Vn.n.n		->	V[n].[n + 1].0 component change
+
 BOM		Vn.n.n		->	V[n].[n + 1].0 componant change
+
 PCB		Vn.n  		->	V[n].[n + 1] footprint change in layout
+
 The minor change has an impact on the schema, BOM and the PCB.
 
 For each Minor change the patch number is set to 0.
@@ -89,16 +97,24 @@ e.g.
 -	Replacing an OPAMP but keeping the footprint and pinout same. 
 
 
-E.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V 
+E.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V
+
 Schema	V0.0.0		->	V0.0.1
+
 BOM		V0.0.0		->	V0.0.1
+
 PCB		V0.0  		->	V0.0 no layout changes
+
 The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
 
 E.g. excluding placement of certain circuitry without any functional limitations (e.g. debug pin, debug LED, etc.)
+
 Schema	V0.0.0		->	V0.0.1 parts are marked as do not place (DNP) 
+
 BOM		V0.0.0		->	V0.0.1  parts are excluded from BOM
+
 PCB		V0.0  		->	V0.0 no layout changes
+
 The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
 
 
