@@ -36,19 +36,19 @@ Form, fit and function change
 The Major number indicates and changes which break backwards compatability with older versions.
 The following lists show categorically differenciated examples of changes which are considered major.
 
-Electromechanical and Mechanical changes.
+**Electromechanical and Mechanical changes**
 -	removing or moving mounting holes
 -	reshaping the outline of the PCB
 -	changing the PCBA material and/or thickness
 -	Moving connectors
 
-Any changes to the design
+**Any changes to the design**
 -	Change of microcontroller
 -	Adding or removing Connectors
 -	Adding or removing features e.g. adding a Temperature sensor
 -	Adding power input protection circuit
 
-Any changes to the electronic interface
+**Any changes to the electronic interface**
 -	Changing connector pinouts
 
 For any given major change the first digit in the version code must be iterated. This number must be applyed to all the files related to the PCBA. Even if certain changes do not affect certain files. This is done to prevent any confusion and maintains in clarity in the versioning history
