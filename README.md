@@ -1,8 +1,16 @@
 # HW-Versioning-Rule-Book
 Hardware Versioning Rule Book
 
-# Versioning philosophy
+This rule book definesthe rules and the philosophy on how to versioncontrol a Printed Circuit Boad Assemblied (PCBA).
 
+## Versioning philosophy
+
+Every Printed Circuit Boad Assemblied (PCBA) has two categorys of files.
+-  Design Files
+-  Production Files
+
+The design files incorperates layout, schematics, Bill of Material (BOM) and possible additional documentation.
+The produzction files incorperate gerber files, ODB++, PCB stackup definitions, etc.
 
 V0.0.0
 
