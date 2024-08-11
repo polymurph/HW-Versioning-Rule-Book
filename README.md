@@ -20,14 +20,14 @@ These rules also inshure clarity towards any related firmware
 
 ## Semantics
 
-V0.0.0
+V0.0.0.JJJJ.MM.DD
 
-Major.Minor.Patch
+Major.Minor.Patch.Year.Month.Day
 
 e.g.
-Schema 	V0.0.0
-BOM 		V0.0.0
-PCB		V0.0
+Schema 	V0.0.0.2024.08.11
+BOM 		V0.0.0.2024.08.11
+PCB		V0.0.2024.08.11
 
 ### Major
 
@@ -88,7 +88,7 @@ For a given PCB Version number V[n].[x] with the same Major version denoted with
 
 ### Patch
 
-The patch number indicates the patchwork version of the PCBA at hand. It changes with every change that does not affect the PCB. Any patch change will be compatible with the PCB version at hand.
+The patch number indicates the patchwork version of the PCBA at hand. It changes with every change that does not alter the PCB. Any patch change will be compatible with the PCB version at hand.
 The following lists show categorically differenciated examples of changes which are considered a patch change.
 
 Only changes to the BOM or Schmeatics no changes to the PCBA in any form
@@ -99,11 +99,13 @@ e.g.
 
 E.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V
 
-Schema	V0.0.0		->	V0.0.1
+Date of change 2024.08.11
 
-BOM		V0.0.0		->	V0.0.1
+Schema   V0.0.0.2024.08.01  ->	V0.0.1.2024.08.11
 
-PCB		V0.0  		->	V0.0 no layout changes
+BOM      V0.0.0.2024.08.01  ->	V0.0.1.2024.08.11
+
+PCB      V0.0.2024.08.01    ->	V0.0 no layout changes
 
 The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
 
