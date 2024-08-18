@@ -17,17 +17,31 @@ Any files related to the PCBA in later explained two categor categories must con
 
 These rules also inshure clarity towards any related firmware 
 
-
 ## Semantics
 
-V0.0.0.JJJJ.MM.DD
+Here is an example of a packet which includes all production files for a PCBA
+
+File name containing all the relevant design and production files
+
+```bash
+
+PCBA_name_V0_0_0_2024_08_18/
+├── schema_PCBA_name_V0_0_0_2024_08_18.sch
+├── prod_PCBA_name_V0_0_2024_08_18.zip
+├── BOM_PCBA_name_V0_0_0_0_2024_08_18.xlsx
+└── ALTLIST_PCBA_name_V0_0_0_0_2024_08_18.xlsx
+
+```
 
 Major.Minor.Patch.Year.Month.Day
 
 e.g.
-Schema 	V0.0.0.2024.08.11
-BOM 		V0.0.0.2024.08.11
-PCB		V0.0.2024.08.11
+Schema 	  V0.0.0
+BOM 		  V0.0.0.0
+ALTLIST   V0.0.0.0
+PCB		    V0.0
+
+THe 
 
 ### Major
 
@@ -101,11 +115,11 @@ E.g. exchanging a 100nF 1206 X7R 25V with a 220nF 1206 X7R 25V
 
 Date of change 2024.08.11
 
-Schema   V0.0.0.2024.08.01  ->	V0.0.1.2024.08.11
+Schema   V0.0.0  ->	V0.0.1
 
-BOM      V0.0.0.2024.08.01  ->	V0.0.1.2024.08.11
+BOM      V0.0.0  ->	V0.0.1
 
-PCB      V0.0.2024.08.01    ->	V0.0 no layout changes
+PCB      V0.0   ->	V0.0 no layout changes
 
 The patch only has an impact on the Schema and the BOM. It has no implications with the PCB (no layout change).
 
@@ -121,6 +135,11 @@ The patch only has an impact on the Schema and the BOM. It has no implications w
 
 
 For more rigerose tracking of the PCBA it is allowed to add by any means the possibility of adding the patch number on to the PCB after assembling or modification to be able to identify what path is implemented on the PCBA. One example is to add in silk an area for marking the patch version onto the PCB.
+
+### Last number for BOM and ALTLIST
+
+The BOM ant the alternatve parts list have an additional number. This number represents how the bom is made up. for instance R&D creates a BOM for a medical application. This BOM is the first initial one e.g. V0.0.0.0. as it is still used as a prototype. The BOM may be representing the parts wanted functionally but neglecting the sourcing aspect. In this BOM there may be some issues e.g. not recomended for new designs, parts which are intended for the automotive market. These parts in this case mostly can be replaced by alternative parts which so not impy any design changes to e.g. pinout, footprint etc. If wanting to only change the 
+
 
 ## Optional Topics
 
