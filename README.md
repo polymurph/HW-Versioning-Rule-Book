@@ -138,7 +138,15 @@ For more rigerose tracking of the PCBA it is allowed to add by any means the pos
 
 ### Last number for BOM and ALTLIST
 
-The BOM ant the alternatve parts list have an additional number. This number represents how the bom is made up. for instance R&D creates a BOM for a medical application. This BOM is the first initial one e.g. V0.0.0.0. as it is still used as a prototype. The BOM may be representing the parts wanted functionally but neglecting the sourcing aspect. In this BOM there may be some issues e.g. not recomended for new designs, parts which are intended for the automotive market. These parts in this case mostly can be replaced by alternative parts which so not impy any design changes to e.g. pinout, footprint etc. If wanting to only change the 
+The BOM ant the alternatve parts list have an additional number. This number represents how the bom is made up. for instance R&D creates a BOM for a medical application. This BOM is the first initial one e.g. V0.0.0.0. as it is still used as a prototype. The BOM may be representing the parts wanted functionally but neglecting the sourcing aspect. In this BOM there may be some issues e.g. not recomended for new designs, parts which are intended for the automotive market. These parts in this case mostly can be replaced by alternative parts which so not impy any design changes to e.g. pinout, footprint etc. If wanting to only change the
+
+### Date
+
+The date denotes when the files where published as an additional feature for clarity.
+More important is the indication of redactional changes. These are changes which alter only the metadata of the PCBA. This means no changes to the design and production files technical content. It denotes only changes e.g. Typos, adding better documentation in schematics. This does not include typos in the BOM content. These typos will require an iteration if the last number.
+When wanting to release the redactional changes the dates of all files must be changed including the file name. Like this it si possible to see that a file with the same version number but different date will be technically idential. the production of both will be identical.
+
+Every time any form of new release is made the date will be changed to the publishing date. This includes all the major, minor, patch and last number changes.
 
 
 ## Optional Topics
